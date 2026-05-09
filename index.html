@@ -216,7 +216,7 @@ p{
   box-shadow:0 10px 25px rgba(255,0,110,0.5);
 }
 
-.btn-music{
+.btn-photo{
   background:linear-gradient(45deg,#00c3ff,#6a00ff);
   box-shadow:0 10px 25px rgba(0,195,255,0.5);
 }
@@ -310,7 +310,7 @@ p{
   line-height:1.8;
 }
 
-/* LOVE EXPLOSION */
+/* LOVE EFFECT */
 
 .love-burst{
   position:fixed;
@@ -336,6 +336,55 @@ p{
   }
 }
 
+/* PHOTO POPUP */
+
+.photo-popup{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.85);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:99999;
+  padding:20px;
+}
+
+.photo-box{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:25px;
+  padding:20px;
+  text-align:center;
+  color:white;
+  position:relative;
+  animation:fade 0.5s ease;
+  max-width:350px;
+  width:100%;
+}
+
+.photo-box img{
+  width:100%;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.photo-box h3{
+  margin-top:15px;
+  font-size:1.2rem;
+}
+
+.close-btn{
+  position:absolute;
+  top:10px;
+  right:15px;
+  font-size:1.5rem;
+  cursor:pointer;
+}
+
 /* MOBILE */
 
 @media(max-width:768px){
@@ -346,8 +395,6 @@ p{
 
   .card{
     padding:35px 20px;
-    overflow-y:auto;
-    max-height:none;
   }
 
   h1{
@@ -443,9 +490,9 @@ class="btn btn-love">
 
 </a>
 
-<button class="btn btn-music" onclick="loveSurprise()">
+<button class="btn btn-photo" onclick="showPhoto()">
 
-✨ Surprise Untuk Ale
+📸 Lihat Beta Pung Foto
 
 </button>
 
@@ -487,6 +534,24 @@ dibuat dengan full effort dan perasaan tulus ❤️
 
 </div>
 
+<!-- PHOTO POPUP -->
+
+<div id="photoPopup" class="photo-popup">
+
+<div class="photo-box">
+
+<span class="close-btn" onclick="closePhoto()">
+✖
+</span>
+
+<img src="images/Gambar.png">
+
+<h3>❤️Halloooo Guysss❤️</h3>
+
+</div>
+
+</div>
+
 <script>
 
 // LOVE PARTICLES
@@ -518,28 +583,17 @@ heart.remove();
 
 setInterval(createHeart,250);
 
-// SURPRISE MESSAGE
+// PHOTO POPUP
 
-function loveSurprise(){
+function showPhoto(){
 
-const messages = [
+document.getElementById("photoPopup").style.display = "flex";
 
-"💖 Ale itu rumah ternyaman par beta",
+}
 
-"🥺 Kalau dunia jahat par ale, sini beta peluk",
+function closePhoto(){
 
-"❤️ Beta mungkin seng sempurna, tapi rasa ini tulus par ale",
-
-"💞 Ale adalah bagian terindah dari beta pung hidup",
-
-"🌎 Dari banyak orang di dunia, beta bersyukur ketemu ale"
-
-];
-
-const randomMessage =
-messages[Math.floor(Math.random() * messages.length)];
-
-alert(randomMessage);
+document.getElementById("photoPopup").style.display = "none";
 
 }
 
@@ -555,7 +609,7 @@ document.getElementById("giftMessage").innerHTML =
 function loveGift(){
 
 document.getElementById("giftMessage").innerHTML =
-"💖 Selamat! Ale berhasil buka samua beta pung isi hati 💖<br><br>❤️ BETA SAYANG ALE SE BANYAK ITU ❤️";
+"💖 Selamat! Ale berhasil buka samua beta pung isi hati 💖<br><br>❤️ I LOVE YOU NONA ❤️";
 
 createLoveExplosion();
 
