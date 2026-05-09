@@ -1,75 +1,47 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Untuk Nona ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<title>Nancy Paunno ❤️</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
-    body{
-      font-family:'Poppins',sans-serif;
-      overflow:hidden;
-      height:100vh;
-      background:black;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      position:relative;
-    }
+<style>
 
-    /* Background animasi */
-    .bg{
-      position:absolute;
-      width:100%;
-      height:100%;
-      background:linear-gradient(-45deg,#ff0080,#ff4d6d,#6a00ff,#00c3ff);
-      background-size:400% 400%;
-      animation:bgmove 12s ease infinite;
-      z-index:-3;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    @keyframes bgmove{
-      0%{background-position:0% 50%;}
-      50%{background-position:100% 50%;}
-      100%{background-position:0% 50%;}
-    }
+body{
+  font-family:'Poppins',sans-serif;
+  background:black;
+  overflow-x:hidden;
+  overflow-y:auto;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  position:relative;
+  padding:20px;
+}
 
-    /* Blur glass */
-    .card{
-      width:90%;
-      max-width:850px;
-      padding:50px 40px;
-      border-radius:30px;
-      background:rgba(255,255,255,0.08);
-      backdrop-filter:blur(14px);
-      border:1px solid rgba(255,255,255,0.15);
-      box-shadow:0 20px 60px rgba(0,0,0,0.45);
-      text-align:center;
-      color:white;
-      position:relative;
-      overflow:hidden;
-      animation:fade 2s ease;
-    }
+/* BACKGROUND */
 
-    @keyframes fade{
-      from{
-        opacity:0;
-        transform:translateY(40px);
-      }
-      to{
-        opacity:1;
-        transform:translateY(0);
-      }
-    }
+.bg{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:linear-gradient(-45deg,#ff0080,#ff4d6d,#6a00ff,#00c3ff);
+  background-size:400% 400%;
+  animation:bgmove 12s ease infinite;
+  z-index:-5;
+}
 
+HEAD
     .glow{
       position:absolute;
       width:300px;
@@ -79,278 +51,612 @@
       filter:blur(90px);
       animation:moveGlow 8s infinite alternate;
     }
+@keyframes bgmove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+ e7020efc634e7a4f3b27fe2c74577c9d7af0c3b0
 
-    .glow:nth-child(1){
-      top:-100px;
-      left:-100px;
-    }
+/* CARD */
 
-    .glow:nth-child(2){
-      bottom:-100px;
-      right:-100px;
-      animation-delay:2s;
-    }
+.card{
+  width:100%;
+  max-width:900px;
+  margin:auto;
+  padding:50px 40px;
+  border-radius:30px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.15);
+  box-shadow:0 20px 60px rgba(0,0,0,0.45);
+  text-align:center;
+  color:white;
+  position:relative;
+  overflow:hidden;
+  animation:fade 2s ease;
+}
 
-    @keyframes moveGlow{
-      from{
-        transform:translate(0,0);
-      }
-      to{
-        transform:translate(50px,50px);
-      }
-    }
+@keyframes fade{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
 
-    h1{
-      font-family:'Great Vibes',cursive;
-      font-size:5rem;
-      margin-bottom:10px;
-      color:white;
-      text-shadow:0 0 25px rgba(255,255,255,0.8);
-      animation:pulse 2s infinite alternate;
-    }
+/* GLOW */
 
-    @keyframes pulse{
-      from{
-        transform:scale(1);
-      }
-      to{
-        transform:scale(1.03);
-      }
-    }
+.glow{
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:rgba(255,255,255,0.15);
+  border-radius:50%;
+  filter:blur(90px);
+  animation:moveGlow 8s infinite alternate;
+}
 
-    .line{
-      width:120px;
-      height:4px;
-      background:white;
-      margin:20px auto 30px;
-      border-radius:20px;
-      box-shadow:0 0 15px white;
-    }
+.glow:nth-child(1){
+  top:-100px;
+  left:-100px;
+}
 
-    .typing{
-      font-size:1.4rem;
-      font-weight:600;
-      white-space:nowrap;
-      overflow:hidden;
-      border-right:3px solid white;
-      width:0;
-      margin:0 auto 30px;
-      animation:typing 6s steps(45,end) forwards, blink .8s infinite;
-    }
+.glow:nth-child(2){
+  bottom:-100px;
+  right:-100px;
+  animation-delay:2s;
+}
 
-    @keyframes typing{
-      from{width:0}
-      to{width:100%}
-    }
+@keyframes moveGlow{
+  from{
+    transform:translate(0,0);
+  }
+  to{
+    transform:translate(50px,50px);
+  }
+}
 
-    @keyframes blink{
-      50%{border-color:transparent}
-    }
+/* TITLE */
 
-    p{
-      font-size:1.15rem;
-      line-height:2;
-      margin-bottom:25px;
-      color:#f8f8f8;
-    }
+h1{
+  font-family:'Great Vibes',cursive;
+  font-size:5rem;
+  margin-bottom:10px;
+  text-shadow:0 0 25px rgba(255,255,255,0.8);
+  animation:pulse 2s infinite alternate;
+}
 
-    .highlight{
-      color:#fff;
-      font-weight:700;
-      text-shadow:0 0 15px rgba(255,255,255,0.8);
-    }
+@keyframes pulse{
+  from{
+    transform:scale(1);
+  }
+  to{
+    transform:scale(1.03);
+  }
+}
 
-    .btn-group{
-      margin-top:35px;
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
-    }
+.line{
+  width:120px;
+  height:4px;
+  background:white;
+  margin:20px auto 30px;
+  border-radius:20px;
+  box-shadow:0 0 15px white;
+}
 
-    .btn{
-      padding:16px 32px;
-      border:none;
-      border-radius:50px;
-      font-size:1rem;
-      font-weight:600;
-      cursor:pointer;
-      transition:0.4s;
-      text-decoration:none;
-      color:white;
-      position:relative;
-      overflow:hidden;
-    }
+/* TYPING */
 
-    .btn::before{
-      content:'';
-      position:absolute;
-      top:0;
-      left:-100%;
-      width:100%;
-      height:100%;
-      background:rgba(255,255,255,0.25);
-      transition:0.5s;
-    }
+.typing{
+  font-size:1.4rem;
+  font-weight:600;
+  margin:0 auto 30px;
+  line-height:1.8;
+  max-width:100%;
+  word-wrap:break-word;
+  overflow-wrap:break-word;
+  border-right:3px solid white;
+  padding-right:5px;
+  animation:blink .8s infinite;
+}
 
-    .btn:hover::before{
-      left:100%;
-    }
+@keyframes blink{
+  50%{
+    border-color:transparent;
+  }
+}
 
-    .btn-love{
-      background:linear-gradient(45deg,#ff006e,#ff4d6d);
-      box-shadow:0 10px 25px rgba(255,0,110,0.5);
-    }
+/* TEXT */
 
-    .btn-love:hover{
-      transform:translateY(-5px) scale(1.05);
-    }
+p{
+  font-size:1.15rem;
+  line-height:2;
+  margin-bottom:25px;
+  color:#f8f8f8;
+}
 
-    .btn-music{
-      background:linear-gradient(45deg,#00c3ff,#6a00ff);
-      box-shadow:0 10px 25px rgba(0,195,255,0.5);
-    }
+.highlight{
+  font-weight:700;
+  text-shadow:0 0 15px rgba(255,255,255,0.8);
+}
 
-    .btn-music:hover{
-      transform:translateY(-5px) scale(1.05);
-    }
+/* BUTTON */
 
-    /* Love particles */
-    .heart{
-      position:absolute;
-      color:white;
-      animation:float linear infinite;
-      opacity:0.8;
-      z-index:-1;
-    }
+.btn-group{
+  margin-top:35px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
 
-    @keyframes float{
-      from{
-        transform:translateY(100vh) scale(0.4);
-        opacity:0;
-      }
-      30%{
-        opacity:1;
-      }
-      to{
-        transform:translateY(-10vh) scale(1.5);
-        opacity:0;
-      }
-    }
+.btn{
+  padding:16px 32px;
+  border:none;
+  border-radius:50px;
+  font-size:1rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.4s;
+  text-decoration:none;
+  color:white;
+  position:relative;
+  overflow:hidden;
+}
 
-    .footer{
-      margin-top:35px;
-      font-size:0.95rem;
-      opacity:0.8;
-    }
+.btn::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:rgba(255,255,255,0.25);
+  transition:0.5s;
+}
 
-    @media(max-width:768px){
-      h1{
-        font-size:3.5rem;
-      }
+.btn:hover::before{
+  left:100%;
+}
 
-      .typing{
-        font-size:1rem;
-      }
+.btn-love{
+  background:linear-gradient(45deg,#ff006e,#ff4d6d);
+  box-shadow:0 10px 25px rgba(255,0,110,0.5);
+}
 
-      p{
-        font-size:1rem;
-      }
+.btn-photo{
+  background:linear-gradient(45deg,#00c3ff,#6a00ff);
+  box-shadow:0 10px 25px rgba(0,195,255,0.5);
+}
 
-      .card{
-        padding:35px 25px;
-      }
-    }
-  </style>
+.btn:hover{
+  transform:translateY(-5px) scale(1.05);
+}
+
+/* FOOTER */
+
+.footer{
+  margin-top:35px;
+  font-size:0.95rem;
+  opacity:0.8;
+}
+
+/* HEART PARTICLES */
+
+.heart{
+  position:absolute;
+  color:white;
+  animation:float linear infinite;
+  opacity:0.8;
+  z-index:-1;
+}
+
+@keyframes float{
+  from{
+    transform:translateY(100vh) scale(0.4);
+    opacity:0;
+  }
+
+  30%{
+    opacity:1;
+  }
+
+  to{
+    transform:translateY(-10vh) scale(1.5);
+    opacity:0;
+  }
+}
+
+/* GAME */
+
+.gift-game{
+  margin-top:60px;
+}
+
+.gift-game h2{
+  margin-bottom:10px;
+  font-size:2rem;
+}
+
+.game-text{
+  margin-bottom:25px;
+  color:#eee;
+}
+
+.gift-container{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+}
+
+.gift{
+  width:120px;
+  height:120px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.1);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:4rem;
+  cursor:pointer;
+  transition:0.4s;
+  border:1px solid rgba(255,255,255,0.2);
+  backdrop-filter:blur(10px);
+}
+
+.gift:hover{
+  transform:translateY(-10px) scale(1.08);
+  box-shadow:0 15px 35px rgba(255,255,255,0.2);
+}
+
+#giftMessage{
+  margin-top:30px;
+  font-size:1.3rem;
+  font-weight:bold;
+  min-height:50px;
+  line-height:1.8;
+}
+
+/* LOVE EFFECT */
+
+.love-burst{
+  position:fixed;
+  font-size:2rem;
+  animation:loveFly 2s linear forwards;
+  z-index:9999;
+  pointer-events:none;
+}
+
+@keyframes loveFly{
+  0%{
+    transform:translateY(0) scale(0.5);
+    opacity:0;
+  }
+
+  20%{
+    opacity:1;
+  }
+
+  100%{
+    transform:translateY(-250px) scale(1.8);
+    opacity:0;
+  }
+}
+
+/* PHOTO POPUP */
+
+.photo-popup{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.85);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:99999;
+  padding:20px;
+}
+
+.photo-box{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:25px;
+  padding:20px;
+  text-align:center;
+  color:white;
+  position:relative;
+  animation:fade 0.5s ease;
+  max-width:350px;
+  width:100%;
+}
+
+.photo-box img{
+  width:100%;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.photo-box h3{
+  margin-top:15px;
+  font-size:1.2rem;
+}
+
+.close-btn{
+  position:absolute;
+  top:10px;
+  right:15px;
+  font-size:1.5rem;
+  cursor:pointer;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  body{
+    padding:10px;
+  }
+
+  .card{
+    padding:35px 20px;
+  }
+
+  h1{
+    font-size:3rem;
+    line-height:1.2;
+  }
+
+  .typing{
+    font-size:1rem;
+    white-space:normal;
+    line-height:1.8;
+    border-right:none;
+  }
+
+  p{
+    font-size:1rem;
+    line-height:1.9;
+  }
+
+  .btn-group{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .btn{
+    width:100%;
+    max-width:300px;
+  }
+
+  .gift{
+    width:90px;
+    height:90px;
+    font-size:3rem;
+  }
+
+  .gift-game h2{
+    font-size:1.3rem;
+    line-height:1.6;
+  }
+
+  #giftMessage{
+    font-size:1rem;
+  }
+
+}
+
+</style>
 </head>
+
 <body>
 
 <div class="bg"></div>
 
 <div class="card">
 
-  <div class="glow"></div>
-  <div class="glow"></div>
+<div class="glow"></div>
+<div class="glow"></div>
 
-  <h1>Untuk Kamu ❤️</h1>
+<h1>Nancy Paunno ❤️</h1>
 
-  <div class="line"></div>
+<div class="line"></div>
 
-  <div class="typing">
-    Kamu adalah alasan kenapa aku selalu tersenyum setiap hari...
-  </div>
+<div class="typing">
+Ale adalah alasan kenapa beta seng jatuh cinta lagi par orang laeng...
+</div>
 
-  <p>
-    Dari semua orang yang pernah hadir dalam hidupku,
-    <span class="highlight">kamu adalah rumah paling nyaman</span> yang pernah aku temukan.
-    Hadirmu bikin hari biasa jadi luar biasa,
-    bikin dunia yang awalnya biasa aja jadi terasa lebih indah.
-  </p>
+<p>
+Dari semua orang yang pernah hadir dalam Beta pung hidup,
+<span class="highlight">Ale adalah rumah paling nyaman</span>
+yang pernah Beta temukan.
+</p>
 
-  <p>
-    Aku nggak tahu masa depan bakal seperti apa,
-    tapi satu hal yang aku tahu...
-    <span class="highlight">aku ingin tetap bersama kamu</span>,
-    melewati semua tawa, cerita, mimpi,
-    bahkan hal-hal kecil yang mungkin nggak penting bagi orang lain.
-  </p>
+<p>
+Beta seng tau masa depan bakal seperti apa,
+tapi satu hal yang Beta tau...
+<span class="highlight">Beta ingin tetap bersama Ale.</span>
+</p>
 
-  <p>
-    Kalau suatu hari nanti kamu capek,
-    jangan lupa kalau masih ada aku yang selalu mau dengerin cerita kamu.
-    Karena buat aku,
-    <span class="highlight">kamu lebih berharga dari apa pun.</span>
-  </p>
+<p>
+Kalau suatu hari nanti Ale capek,
+jangan lupa kalau masih ada Beta yang selalu mau dengar ale carita ❤️
+</p>
 
-  <div class="btn-group">
-    <a href="https://wa.me/" class="btn btn-love">💌 Peluk Virtual</a>
+<!-- BUTTON -->
 
-    <button class="btn btn-music" onclick="playMusic()">
-      🎵 Putar Lagu
-    </button>
-  </div>
+<div class="btn-group">
 
-  <div class="footer">
-    dibuat dengan perasaan tulus ❤️
-  </div>
+<a href="https://wa.me/6282379996649?text=Hai%20sayang%20❤️%20aku%20mau%20video%20call%20sama%20kamu"
+target="_blank"
+class="btn btn-love">
+
+💌 Coba klik
+
+</a>
+
+<button class="btn btn-photo" onclick="showPhoto()">
+
+📸 Foto
+
+</button>
 
 </div>
 
-<audio id="music" loop>
-  <source src="Mantan Terindahku.mp3" type="audio/mpeg">
-</audio>
+<!-- GAME -->
+
+<div class="gift-game">
+
+<h2>🎁 Pilih Hadiah Untuk Buka Beta Isi Hati ❤️</h2>
+
+<p class="game-text">
+cuma satu hadiah yang isinya beta pung samua perasaan par ale 💖
+</p>
+
+<div class="gift-container">
+
+<div class="gift" onclick="wrongGift()">
+🎁
+</div>
+
+<div class="gift" onclick="loveGift()">
+💝
+</div>
+
+<div class="gift" onclick="wrongGift()">
+🎁
+</div>
+
+</div>
+
+<div id="giftMessage"></div>
+
+</div>
+
+<div class="footer">
+dibuat dengan full effort dan perasaan tulus ❤️
+</div>
+
+</div>
+
+<!-- PHOTO POPUP -->
+
+<div id="photoPopup" class="photo-popup">
+
+<div class="photo-box">
+
+<span class="close-btn" onclick="closePhoto()">
+✖
+</span>
+
+<img src="images/Gambar.png">
+
+<h3>❤️Halloooo Guysss❤️</h3>
+
+</div>
+
+</div>
 
 <script>
 
-  // Love particles
-  function createHeart(){
-    const heart = document.createElement('div');
-    heart.classList.add('heart');
-    heart.innerHTML = '❤';
+// LOVE PARTICLES
 
-    heart.style.left = Math.random() * window.innerWidth + 'px';
-    heart.style.fontSize = (Math.random() * 25 + 10) + 'px';
-    heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+function createHeart(){
 
-    document.body.appendChild(heart);
+const heart = document.createElement('div');
 
-    setTimeout(() => {
-      heart.remove();
-    },10000);
-  }
+heart.classList.add('heart');
 
-  setInterval(createHeart,250);
+heart.innerHTML = '❤';
 
-  // Musik
-  function playMusic(){
-    const music = document.getElementById('music');
+heart.style.left =
+Math.random() * window.innerWidth + 'px';
 
-    if(music.paused){
-      music.play();
-    }else{
-      music.pause();
-    }
-  }
+heart.style.fontSize =
+(Math.random() * 25 + 10) + 'px';
+
+heart.style.animationDuration =
+(Math.random() * 5 + 5) + 's';
+
+document.body.appendChild(heart);
+
+setTimeout(() => {
+heart.remove();
+},10000);
+
+}
+
+setInterval(createHeart,250);
+
+// PHOTO POPUP
+
+function showPhoto(){
+
+document.getElementById("photoPopup").style.display = "flex";
+
+}
+
+function closePhoto(){
+
+document.getElementById("photoPopup").style.display = "none";
+
+}
+
+// GAME
+
+function wrongGift(){
+
+document.getElementById("giftMessage").innerHTML =
+"🥺 Yahh belum beruntung... coba lagi sayang ❤️";
+
+}
+
+function loveGift(){
+
+document.getElementById("giftMessage").innerHTML =
+"💖 Selamat! Ale berhasil buka samua beta pung isi hati 💖<br><br>❤️ I LOVE YOU NONA ❤️";
+
+createLoveExplosion();
+
+}
+
+// LOVE EFFECT
+
+function createLoveExplosion(){
+
+for(let i = 0; i < 35; i++){
+
+const love = document.createElement("div");
+
+love.classList.add("love-burst");
+
+love.innerHTML =
+["❤️","💖","💕","💘"][Math.floor(Math.random()*4)];
+
+love.style.left =
+Math.random() * window.innerWidth + "px";
+
+love.style.top =
+(window.innerHeight - 100) + "px";
+
+love.style.fontSize =
+(Math.random() * 25 + 20) + "px";
+
+document.body.appendChild(love);
+
+setTimeout(() => {
+love.remove();
+},3000);
+
+}
+
+}
 
 </script>
 
