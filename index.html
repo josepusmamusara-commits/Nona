@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Untuk Nona ❤️</title>
+  <title>Par ale ❤️</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -16,24 +17,25 @@
 
     body{
       font-family:'Poppins',sans-serif;
-      overflow:hidden;
-      height:100vh;
       background:black;
+      overflow-x:hidden;
+      min-height:100vh;
       display:flex;
       justify-content:center;
       align-items:center;
       position:relative;
+      padding:30px;
     }
 
-    /* Background animasi */
+    /* Background */
     .bg{
-      position:absolute;
+      position:fixed;
       width:100%;
       height:100%;
       background:linear-gradient(-45deg,#ff0080,#ff4d6d,#6a00ff,#00c3ff);
       background-size:400% 400%;
       animation:bgmove 12s ease infinite;
-      z-index:-3;
+      z-index:-5;
     }
 
     @keyframes bgmove{
@@ -42,14 +44,13 @@
       100%{background-position:0% 50%;}
     }
 
-    /* Blur glass */
     .card{
-      width:90%;
-      max-width:850px;
+      width:100%;
+      max-width:900px;
       padding:50px 40px;
       border-radius:30px;
       background:rgba(255,255,255,0.08);
-      backdrop-filter:blur(14px);
+      backdrop-filter:blur(15px);
       border:1px solid rgba(255,255,255,0.15);
       box-shadow:0 20px 60px rgba(0,0,0,0.45);
       text-align:center;
@@ -104,7 +105,6 @@
       font-family:'Great Vibes',cursive;
       font-size:5rem;
       margin-bottom:10px;
-      color:white;
       text-shadow:0 0 25px rgba(255,255,255,0.8);
       animation:pulse 2s infinite alternate;
     }
@@ -155,7 +155,6 @@
     }
 
     .highlight{
-      color:#fff;
       font-weight:700;
       text-shadow:0 0 15px rgba(255,255,255,0.8);
     }
@@ -202,17 +201,19 @@
       box-shadow:0 10px 25px rgba(255,0,110,0.5);
     }
 
-    .btn-love:hover{
-      transform:translateY(-5px) scale(1.05);
-    }
-
     .btn-music{
       background:linear-gradient(45deg,#00c3ff,#6a00ff);
       box-shadow:0 10px 25px rgba(0,195,255,0.5);
     }
 
-    .btn-music:hover{
+    .btn:hover{
       transform:translateY(-5px) scale(1.05);
+    }
+
+    .footer{
+      margin-top:35px;
+      font-size:0.95rem;
+      opacity:0.8;
     }
 
     /* Love particles */
@@ -229,22 +230,92 @@
         transform:translateY(100vh) scale(0.4);
         opacity:0;
       }
+
       30%{
         opacity:1;
       }
+
       to{
         transform:translateY(-10vh) scale(1.5);
         opacity:0;
       }
     }
 
-    .footer{
-      margin-top:35px;
-      font-size:0.95rem;
-      opacity:0.8;
+    /* GAME */
+    .gift-game{
+      margin-top:60px;
+    }
+
+    .gift-game h2{
+      margin-bottom:10px;
+      font-size:2rem;
+    }
+
+    .game-text{
+      margin-bottom:25px;
+      color:#eee;
+    }
+
+    .gift-container{
+      display:flex;
+      justify-content:center;
+      gap:25px;
+      flex-wrap:wrap;
+    }
+
+    .gift{
+      width:120px;
+      height:120px;
+      border-radius:25px;
+      background:rgba(255,255,255,0.1);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:4rem;
+      cursor:pointer;
+      transition:0.4s;
+      border:1px solid rgba(255,255,255,0.2);
+      backdrop-filter:blur(10px);
+    }
+
+    .gift:hover{
+      transform:translateY(-10px) scale(1.08);
+      box-shadow:0 15px 35px rgba(255,255,255,0.2);
+    }
+
+    #giftMessage{
+      margin-top:30px;
+      font-size:1.3rem;
+      font-weight:bold;
+      min-height:50px;
+    }
+
+    .love-burst{
+      position:fixed;
+      font-size:2rem;
+      animation:loveFly 2s linear forwards;
+      z-index:9999;
+      pointer-events:none;
+    }
+
+    @keyframes loveFly{
+      0%{
+        transform:translateY(0) scale(0.5);
+        opacity:0;
+      }
+
+      20%{
+        opacity:1;
+      }
+
+      100%{
+        transform:translateY(-250px) scale(1.8);
+        opacity:0;
+      }
     }
 
     @media(max-width:768px){
+
       h1{
         font-size:3.5rem;
       }
@@ -260,9 +331,18 @@
       .card{
         padding:35px 25px;
       }
+
+      .gift{
+        width:90px;
+        height:90px;
+        font-size:3rem;
+      }
+
     }
+
   </style>
 </head>
+
 <body>
 
 <div class="bg"></div>
@@ -272,46 +352,74 @@
   <div class="glow"></div>
   <div class="glow"></div>
 
-  <h1>Untuk Kamu ❤️</h1>
+  <h1>Untuk Ale ❤️</h1>
 
   <div class="line"></div>
 
   <div class="typing">
-    Kamu adalah alasan kenapa aku selalu tersenyum setiap hari...
+    Ale adalah alasan kenapa beta selalu tidak jatuh cinta lagi Untuk orang Baru...
   </div>
 
   <p>
-    Dari semua orang yang pernah hadir dalam hidupku,
-    <span class="highlight">kamu adalah rumah paling nyaman</span> yang pernah aku temukan.
-    Hadirmu bikin hari biasa jadi luar biasa,
-    bikin dunia yang awalnya biasa aja jadi terasa lebih indah.
+    Dari semua orang yang pernah hadir dalam Beta pung hidup,
+    <span class="highlight">Ale adalah rumah paling nyaman</span>
+    yang pernah Beta temukan.
   </p>
 
   <p>
-    Aku nggak tahu masa depan bakal seperti apa,
-    tapi satu hal yang aku tahu...
-    <span class="highlight">aku ingin tetap bersama kamu</span>,
-    melewati semua tawa, cerita, mimpi,
-    bahkan hal-hal kecil yang mungkin nggak penting bagi orang lain.
+    Beta seng tau masa depan bakal seperti apa,
+    tapi satu hal yang Beta tau...
+    <span class="highlight">aku ingin tetap bersama Ale.</span>
   </p>
 
   <p>
-    Kalau suatu hari nanti kamu capek,
-    jangan lupa kalau masih ada aku yang selalu mau dengerin cerita kamu.
-    Karena buat aku,
-    <span class="highlight">kamu lebih berharga dari apa pun.</span>
+    Kalau suatu hari nanti Aale capek,
+    jangan lupa kalau masih ada Beta yang selalu mau dengar ale carita.
   </p>
 
   <div class="btn-group">
-    <a href="https://wa.me/" class="btn btn-love">💌 Peluk Virtual</a>
+
+    <a href="https://wa.me/" class="btn btn-love">
+      💌 Peluk Virtual
+    </a>
 
     <button class="btn btn-music" onclick="playMusic()">
       🎵 Putar Lagu
     </button>
+
+  </div>
+
+  <!-- GAME -->
+  <div class="gift-game">
+
+    <h2>🎁 Pilih Hadiah Untuk Membuka Isi Hatiku ❤️</h2>
+
+    <p class="game-text">
+      cuma satu hadiah yang isinya beta pung samua perasaan par se 💖
+    </p>
+
+    <div class="gift-container">
+
+      <div class="gift" onclick="wrongGift()">
+        🎁
+      </div>
+
+      <div class="gift" onclick="loveGift()">
+        💝
+      </div>
+
+      <div class="gift" onclick="wrongGift()">
+        🎁
+      </div>
+
+    </div>
+
+    <div id="giftMessage"></div>
+
   </div>
 
   <div class="footer">
-    dibuat dengan perasaan tulus ❤️
+    dibuat dengan full efort dan perasaan tulus ❤️
   </div>
 
 </div>
@@ -322,27 +430,37 @@
 
 <script>
 
-  // Love particles
+  // LOVE PARTICLES
   function createHeart(){
+
     const heart = document.createElement('div');
+
     heart.classList.add('heart');
+
     heart.innerHTML = '❤';
 
-    heart.style.left = Math.random() * window.innerWidth + 'px';
-    heart.style.fontSize = (Math.random() * 25 + 10) + 'px';
-    heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+    heart.style.left =
+    Math.random() * window.innerWidth + 'px';
+
+    heart.style.fontSize =
+    (Math.random() * 25 + 10) + 'px';
+
+    heart.style.animationDuration =
+    (Math.random() * 5 + 5) + 's';
 
     document.body.appendChild(heart);
 
     setTimeout(() => {
       heart.remove();
     },10000);
+
   }
 
   setInterval(createHeart,250);
 
-  // Musik
+  // MUSIC
   function playMusic(){
+
     const music = document.getElementById('music');
 
     if(music.paused){
@@ -350,6 +468,54 @@
     }else{
       music.pause();
     }
+
+  }
+
+  // GAME
+  function wrongGift(){
+
+    document.getElementById("giftMessage").innerHTML =
+    "🥺 Yahh belum beruntung... coba lagi sayang ❤️";
+
+  }
+
+  function loveGift(){
+
+    document.getElementById("giftMessage").innerHTML =
+    "💖 Selamat! Kamu berhasil membuka semua isi hatiku 💖";
+
+    createLoveExplosion();
+
+  }
+
+  function createLoveExplosion(){
+
+    for(let i = 0; i < 35; i++){
+
+      const love = document.createElement("div");
+
+      love.classList.add("love-burst");
+
+      love.innerHTML =
+      ["❤️","💖","💕","💘"][Math.floor(Math.random()*4)];
+
+      love.style.left =
+      Math.random() * window.innerWidth + "px";
+
+      love.style.top =
+      (window.innerHeight - 100) + "px";
+
+      love.style.fontSize =
+      (Math.random() * 25 + 20) + "px";
+
+      document.body.appendChild(love);
+
+      setTimeout(() => {
+        love.remove();
+      },3000);
+
+    }
+
   }
 
 </script>
