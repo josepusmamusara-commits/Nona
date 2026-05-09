@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untuk Nona ❤️</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      overflow:hidden;
+      height:100vh;
+      background:black;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      position:relative;
+    }
+
+    /* Background animasi */
+    .bg{
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:linear-gradient(-45deg,#ff0080,#ff4d6d,#6a00ff,#00c3ff);
+      background-size:400% 400%;
+      animation:bgmove 12s ease infinite;
+      z-index:-3;
+    }
+
+    @keyframes bgmove{
+      0%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+      100%{background-position:0% 50%;}
+    }
+
+    /* Blur glass */
+    .card{
+      width:90%;
+      max-width:850px;
+      padding:50px 40px;
+      border-radius:30px;
+      background:rgba(255,255,255,0.08);
+      backdrop-filter:blur(14px);
+      border:1px solid rgba(255,255,255,0.15);
+      box-shadow:0 20px 60px rgba(0,0,0,0.45);
+      text-align:center;
+      color:white;
+      position:relative;
+      overflow:hidden;
+      animation:fade 2s ease;
+    }
+
+    @keyframes fade{
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .glow{
+      position:absolute;
+      width:300px;
+      height:300px;
+      background:rgba(255,255,255,0.15);
+      border-radius:50%;
+      filter:blur(90px);
+      animation:moveGlow 8s infinite alternate;
+    }
+
+    .glow:nth-child(1){
+      top:-100px;
+      left:-100px;
+    }
+
+    .glow:nth-child(2){
+      bottom:-100px;
+      right:-100px;
+      animation-delay:2s;
+    }
+
+    @keyframes moveGlow{
+      from{
+        transform:translate(0,0);
+      }
+      to{
+        transform:translate(50px,50px);
+      }
+    }
+
+    h1{
+      font-family:'Great Vibes',cursive;
+      font-size:5rem;
+      margin-bottom:10px;
+      color:white;
+      text-shadow:0 0 25px rgba(255,255,255,0.8);
+      animation:pulse 2s infinite alternate;
+    }
+
+    @keyframes pulse{
+      from{
+        transform:scale(1);
+      }
+      to{
+        transform:scale(1.03);
+      }
+    }
+
+    .line{
+      width:120px;
+      height:4px;
+      background:white;
+      margin:20px auto 30px;
+      border-radius:20px;
+      box-shadow:0 0 15px white;
+    }
+
+    .typing{
+      font-size:1.4rem;
+      font-weight:600;
+      white-space:nowrap;
+      overflow:hidden;
+      border-right:3px solid white;
+      width:0;
+      margin:0 auto 30px;
+      animation:typing 6s steps(45,end) forwards, blink .8s infinite;
+    }
+
+    @keyframes typing{
+      from{width:0}
+      to{width:100%}
+    }
+
+    @keyframes blink{
+      50%{border-color:transparent}
+    }
+
+    p{
+      font-size:1.15rem;
+      line-height:2;
+      margin-bottom:25px;
+      color:#f8f8f8;
+    }
+
+    .highlight{
+      color:#fff;
+      font-weight:700;
+      text-shadow:0 0 15px rgba(255,255,255,0.8);
+    }
+
+    .btn-group{
+      margin-top:35px;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:16px 32px;
+      border:none;
+      border-radius:50px;
+      font-size:1rem;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.4s;
+      text-decoration:none;
+      color:white;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .btn::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:-100%;
+      width:100%;
+      height:100%;
+      background:rgba(255,255,255,0.25);
+      transition:0.5s;
+    }
+
+    .btn:hover::before{
+      left:100%;
+    }
+
+    .btn-love{
+      background:linear-gradient(45deg,#ff006e,#ff4d6d);
+      box-shadow:0 10px 25px rgba(255,0,110,0.5);
+    }
+
+    .btn-love:hover{
+      transform:translateY(-5px) scale(1.05);
+    }
+
+    .btn-music{
+      background:linear-gradient(45deg,#00c3ff,#6a00ff);
+      box-shadow:0 10px 25px rgba(0,195,255,0.5);
+    }
+
+    .btn-music:hover{
+      transform:translateY(-5px) scale(1.05);
+    }
+
+    /* Love particles */
+    .heart{
+      position:absolute;
+      color:white;
+      animation:float linear infinite;
+      opacity:0.8;
+      z-index:-1;
+    }
+
+    @keyframes float{
+      from{
+        transform:translateY(100vh) scale(0.4);
+        opacity:0;
+      }
+      30%{
+        opacity:1;
+      }
+      to{
+        transform:translateY(-10vh) scale(1.5);
+        opacity:0;
+      }
+    }
+
+    .footer{
+      margin-top:35px;
+      font-size:0.95rem;
+      opacity:0.8;
+    }
+
+    @media(max-width:768px){
+      h1{
+        font-size:3.5rem;
+      }
+
+      .typing{
+        font-size:1rem;
+      }
+
+      p{
+        font-size:1rem;
+      }
+
+      .card{
+        padding:35px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="card">
+
+  <div class="glow"></div>
+  <div class="glow"></div>
+
+  <h1>Untuk Kamu ❤️</h1>
+
+  <div class="line"></div>
+
+  <div class="typing">
+    Kamu adalah alasan kenapa aku selalu tersenyum setiap hari...
+  </div>
+
+  <p>
+    Dari semua orang yang pernah hadir dalam hidupku,
+    <span class="highlight">kamu adalah rumah paling nyaman</span> yang pernah aku temukan.
+    Hadirmu bikin hari biasa jadi luar biasa,
+    bikin dunia yang awalnya biasa aja jadi terasa lebih indah.
+  </p>
+
+  <p>
+    Aku nggak tahu masa depan bakal seperti apa,
+    tapi satu hal yang aku tahu...
+    <span class="highlight">aku ingin tetap bersama kamu</span>,
+    melewati semua tawa, cerita, mimpi,
+    bahkan hal-hal kecil yang mungkin nggak penting bagi orang lain.
+  </p>
+
+  <p>
+    Kalau suatu hari nanti kamu capek,
+    jangan lupa kalau masih ada aku yang selalu mau dengerin cerita kamu.
+    Karena buat aku,
+    <span class="highlight">kamu lebih berharga dari apa pun.</span>
+  </p>
+
+  <div class="btn-group">
+    <a href="https://wa.me/" class="btn btn-love">💌 Peluk Virtual</a>
+
+    <button class="btn btn-music" onclick="playMusic()">
+      🎵 Putar Lagu
+    </button>
+  </div>
+
+  <div class="footer">
+    dibuat dengan perasaan tulus ❤️
+  </div>
+
+</div>
+
+<audio id="music" loop>
+  <source src="Mantan Terindahku.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+  // Love particles
+  function createHeart(){
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML = '❤';
+
+    heart.style.left = Math.random() * window.innerWidth + 'px';
+    heart.style.fontSize = (Math.random() * 25 + 10) + 'px';
+    heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    },10000);
+  }
+
+  setInterval(createHeart,250);
+
+  // Musik
+  function playMusic(){
+    const music = document.getElementById('music');
+
+    if(music.paused){
+      music.play();
+    }else{
+      music.pause();
+    }
+  }
+
+</script>
+
+</body>
+</html>
