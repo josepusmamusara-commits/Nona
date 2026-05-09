@@ -1,3 +1,60 @@
+
+
+
+Kalau begitu ganti tombol kedua jadi lebih unik seperti ini:
+
+<div class="btn-group">
+
+  <a href="https://wa.me/6282379996649?text=Hai%20sayang%20❤️%20aku%20mau%20video%20call%20sama%20kamu"
+     target="_blank"
+     class="btn btn-love">
+
+    💌 Peluk Virtual
+
+  </a>
+
+  <button class="btn btn-music" onclick="loveSurprise()">
+
+    ✨ Surprise Untuk Kamu
+
+  </button>
+
+</div>
+Lalu tambahkan ini sebelum </script>:
+
+function loveSurprise(){
+
+  const messages = [
+
+    "💖 Kamu itu rumah ternyaman yang pernah aku temukan",
+
+    "🥺 Kalau dunia jahat sama kamu, sini aku peluk",
+
+    "❤️ Aku mungkin bukan yang sempurna, tapi perasaanku ke kamu selalu sungguh",
+
+    "💞 Kamu adalah bagian terindah dari hidup aku",
+
+    "🌎 Dari banyak orang di dunia, aku bersyukur ketemu kamu"
+
+  ];
+
+  const randomMessage =
+  messages[Math.floor(Math.random() * messages.length)];
+
+  alert(randomMessage);
+
+}
+Jadi setiap tombol diklik:
+
+muncul kata romantis random
+
+lebih interaktif
+
+aesthetic
+
+cocok buat web couple 💖
+
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -522,4 +579,626 @@
 </script>
 
 </body>
+</html>.Buat agar seluruh tulisan bisa di baca ketika buka di hp
+
+Masalahnya ada di bagian ini:
+
+.typing{
+  white-space:nowrap;
+}
+Itu bikin tulisan panjang tidak turun ke bawah di HP.
+
+✅ Ganti CSS .typing Menjadi Ini
+Cari:
+
+.typing{
+  font-size:1.4rem;
+  font-weight:600;
+  white-space:nowrap;
+  overflow:hidden;
+  border-right:3px solid white;
+  width:0;
+  margin:0 auto 30px;
+  animation:typing 6s steps(45,end) forwards, blink .8s infinite;
+}
+Ganti jadi:
+
+.typing{
+  font-size:1.4rem;
+  font-weight:600;
+  overflow:hidden;
+  border-right:3px solid white;
+  margin:0 auto 30px;
+  animation:fade 2s ease;
+  line-height:1.8;
+  max-width:100%;
+  word-wrap:break-word;
+}
+✅ Tambahkan Ini di body
+Cari:
+
+overflow-x:hidden;
+Tambahkan bawahnya:
+
+overflow-y:auto;
+Jadi:
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:blue;
+  overflow-x:hidden;
+  overflow-y:auto;
+✅ Ganti Ini Juga
+Cari:
+
+height:100vh;
+Kalau ada → ganti jadi:
+
+min-height:100vh;
+✅ Tambahkan di Media HP
+Di bagian:
+
+@media(max-width:768px)
+Tambahkan:
+
+.typing{
+  white-space:normal;
+  font-size:1rem;
+}
+
+.card{
+  overflow-y:auto;
+  max-height:95vh;
+}
+🔥 Hasilnya
+Di HP:
+
+tulisan tidak kepotong
+
+bisa discroll
+
+typing tetap rapi
+
+seluruh isi web bisa dibaca 💖
+
+
+lengkapi code yang saya kirim langsung
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nancy Paunno ❤️</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:black;
+      overflow-x:hidden;
+      overflow-y:auto;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      position:relative;
+      padding:20px;
+    }
+
+    /* Background */
+    .bg{
+      position:fixed;
+      width:100%;
+      height:100%;
+      background:linear-gradient(-45deg,#ff0080,#ff4d6d,#6a00ff,#00c3ff);
+      background-size:400% 400%;
+      animation:bgmove 12s ease infinite;
+      z-index:-5;
+    }
+
+    @keyframes bgmove{
+      0%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+      100%{background-position:0% 50%;}
+    }
+
+    .card{
+      width:100%;
+      max-width:900px;
+      padding:50px 40px;
+      border-radius:30px;
+      background:rgba(255,255,255,0.08);
+      backdrop-filter:blur(15px);
+      border:1px solid rgba(255,255,255,0.15);
+      box-shadow:0 20px 60px rgba(0,0,0,0.45);
+      text-align:center;
+      color:white;
+      position:relative;
+      overflow:hidden;
+      animation:fade 2s ease;
+    }
+
+    @keyframes fade{
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .glow{
+      position:absolute;
+      width:300px;
+      height:300px;
+      background:rgba(255,255,255,0.15);
+      border-radius:50%;
+      filter:blur(90px);
+      animation:moveGlow 8s infinite alternate;
+    }
+
+    .glow:nth-child(1){
+      top:-100px;
+      left:-100px;
+    }
+
+    .glow:nth-child(2){
+      bottom:-100px;
+      right:-100px;
+      animation-delay:2s;
+    }
+
+    @keyframes moveGlow{
+      from{
+        transform:translate(0,0);
+      }
+      to{
+        transform:translate(50px,50px);
+      }
+    }
+
+    h1{
+      font-family:'Great Vibes',cursive;
+      font-size:5rem;
+      margin-bottom:10px;
+      text-shadow:0 0 25px rgba(255,255,255,0.8);
+      animation:pulse 2s infinite alternate;
+    }
+
+    @keyframes pulse{
+      from{
+        transform:scale(1);
+      }
+      to{
+        transform:scale(1.03);
+      }
+    }
+
+    .line{
+      width:120px;
+      height:4px;
+      background:white;
+      margin:20px auto 30px;
+      border-radius:20px;
+      box-shadow:0 0 15px white;
+    }
+
+    .typing{
+      font-size:1.4rem;
+      font-weight:600;
+      margin:0 auto 30px;
+      animation:fade 2s ease;
+      line-height:1.8;
+      max-width:100%;
+      word-wrap:break-word;
+      border-right:3px solid white;
+      padding-right:5px;
+    }
+
+    p{
+      font-size:1.15rem;
+      line-height:2;
+      margin-bottom:25px;
+      color:#f8f8f8;
+    }
+
+    .highlight{
+      font-weight:700;
+      text-shadow:0 0 15px rgba(255,255,255,0.8);
+    }
+
+    .btn-group{
+      margin-top:35px;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:16px 32px;
+      border:none;
+      border-radius:50px;
+      font-size:1rem;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.4s;
+      text-decoration:none;
+      color:white;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .btn::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:-100%;
+      width:100%;
+      height:100%;
+      background:rgba(255,255,255,0.25);
+      transition:0.5s;
+    }
+
+    .btn:hover::before{
+      left:100%;
+    }
+
+    .btn-love{
+      background:linear-gradient(45deg,#ff006e,#ff4d6d);
+      box-shadow:0 10px 25px rgba(255,0,110,0.5);
+    }
+
+    .btn-music{
+      background:linear-gradient(45deg,#00c3ff,#6a00ff);
+      box-shadow:0 10px 25px rgba(0,195,255,0.5);
+    }
+
+    .btn:hover{
+      transform:translateY(-5px) scale(1.05);
+    }
+
+    .footer{
+      margin-top:35px;
+      font-size:0.95rem;
+      opacity:0.8;
+    }
+
+    /* Love particles */
+    .heart{
+      position:absolute;
+      color:white;
+      animation:float linear infinite;
+      opacity:0.8;
+      z-index:-1;
+    }
+
+    @keyframes float{
+      from{
+        transform:translateY(100vh) scale(0.4);
+        opacity:0;
+      }
+
+      30%{
+        opacity:1;
+      }
+
+      to{
+        transform:translateY(-10vh) scale(1.5);
+        opacity:0;
+      }
+    }
+
+    /* GAME */
+    .gift-game{
+      margin-top:60px;
+    }
+
+    .gift-game h2{
+      margin-bottom:10px;
+      font-size:2rem;
+    }
+
+    .game-text{
+      margin-bottom:25px;
+      color:#eee;
+    }
+
+    .gift-container{
+      display:flex;
+      justify-content:center;
+      gap:25px;
+      flex-wrap:wrap;
+    }
+
+    .gift{
+      width:120px;
+      height:120px;
+      border-radius:25px;
+      background:rgba(255,255,255,0.1);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:4rem;
+      cursor:pointer;
+      transition:0.4s;
+      border:1px solid rgba(255,255,255,0.2);
+      backdrop-filter:blur(10px);
+    }
+
+    .gift:hover{
+      transform:translateY(-10px) scale(1.08);
+      box-shadow:0 15px 35px rgba(255,255,255,0.2);
+    }
+
+    #giftMessage{
+      margin-top:30px;
+      font-size:1.3rem;
+      font-weight:bold;
+      min-height:50px;
+    }
+
+    .love-burst{
+      position:fixed;
+      font-size:2rem;
+      animation:loveFly 2s linear forwards;
+      z-index:9999;
+      pointer-events:none;
+    }
+
+    @keyframes loveFly{
+      0%{
+        transform:translateY(0) scale(0.5);
+        opacity:0;
+      }
+
+      20%{
+        opacity:1;
+      }
+
+      100%{
+        transform:translateY(-250px) scale(1.8);
+        opacity:0;
+      }
+    }
+
+    @media(max-width:768px){
+
+      h1{
+        font-size:3rem;
+      }
+
+      .typing{
+        font-size:1rem;
+        white-space:normal;
+      }
+
+      p{
+        font-size:1rem;
+      }
+
+      .card{
+        padding:35px 20px;
+        overflow-y:auto;
+        max-height:95vh;
+      }
+
+      .gift{
+        width:90px;
+        height:90px;
+        font-size:3rem;
+      }
+
+      .gift-game h2{
+        font-size:1.4rem;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="card">
+
+  <div class="glow"></div>
+  <div class="glow"></div>
+
+  <h1>Nancy Paunno ❤️</h1>
+
+  <div class="line"></div>
+
+  <div class="typing">
+    Ale adalah alasan kenapa beta seng jatuh cinta lagi par orang laeng...
+  </div>
+
+  <p>
+    Dari semua orang yang pernah hadir dalam Beta pung hidup,
+    <span class="highlight">Ale adalah rumah paling nyaman</span>
+    yang pernah Beta temukan.
+  </p>
+
+  <p>
+    Beta seng tau masa depan bakal seperti apa,
+    tapi satu hal yang Beta tau...
+    <span class="highlight">Beta ingin tetap bersama Ale.</span>
+  </p>
+
+  <p>
+    Kalau suatu hari nanti Ale capek,
+    jangan lupa kalau masih ada Beta yang selalu mau dengar ale carita.
+  </p>
+
+  <div class="btn-group">
+
+    <a href="https://wa.me/6282379996649?text=Hai%20sayang%20❤️%20aku%20mau%20video%20call%20sama%20kamu"
+       target="_blank"
+       class="btn btn-love">
+
+      💌 Peluk Virtual
+
+    </a>
+
+    <button class="btn btn-music" onclick="loveSurprise()">
+
+      ✨ Surprise Untuk Ale
+
+    </button>
+
+  </div>
+
+  <!-- GAME -->
+  <div class="gift-game">
+
+    <h2>🎁 Pilih Hadiah Untuk Buka Beta Isi Hati ❤️</h2>
+
+    <p class="game-text">
+      cuma satu hadiah yang isinya beta pung samua perasaan par ale 💖
+    </p>
+
+    <div class="gift-container">
+
+      <div class="gift" onclick="wrongGift()">
+        🎁
+      </div>
+
+      <div class="gift" onclick="loveGift()">
+        💝
+      </div>
+
+      <div class="gift" onclick="wrongGift()">
+        🎁
+      </div>
+
+    </div>
+
+    <div id="giftMessage"></div>
+
+  </div>
+
+  <div class="footer">
+    dibuat dengan full effort dan perasaan tulus ❤️
+  </div>
+
+</div>
+
+<script>
+
+  // LOVE PARTICLES
+  function createHeart(){
+
+    const heart = document.createElement('div');
+
+    heart.classList.add('heart');
+
+    heart.innerHTML = '❤';
+
+    heart.style.left =
+    Math.random() * window.innerWidth + 'px';
+
+    heart.style.fontSize =
+    (Math.random() * 25 + 10) + 'px';
+
+    heart.style.animationDuration =
+    (Math.random() * 5 + 5) + 's';
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    },10000);
+
+  }
+
+  setInterval(createHeart,250);
+
+  // SURPRISE
+  function loveSurprise(){
+
+    const messages = [
+
+      "💖 Ale itu rumah ternyaman par beta",
+
+      "🥺 Kalau dunia jahat par ale, sini beta peluk",
+
+      "❤️ Beta mungkin seng sempurna, tapi rasa ini tulus par ale",
+
+      "💞 Ale adalah bagian terindah dari beta pung hidup",
+
+      "🌎 Dari banyak orang di dunia, beta bersyukur ketemu ale"
+
+    ];
+
+    const randomMessage =
+    messages[Math.floor(Math.random() * messages.length)];
+
+    alert(randomMessage);
+
+  }
+
+  // GAME
+  function wrongGift(){
+
+    document.getElementById("giftMessage").innerHTML =
+    "🥺 Yahh belum beruntung... coba lagi sayang ❤️";
+
+  }
+
+  function loveGift(){
+
+    document.getElementById("giftMessage").innerHTML =
+    "💖 Selamat! Ale berhasil buka samua beta pung isi hati 💖";
+
+    createLoveExplosion();
+
+  }
+
+  function createLoveExplosion(){
+
+    for(let i = 0; i < 35; i++){
+
+      const love = document.createElement("div");
+
+      love.classList.add("love-burst");
+
+      love.innerHTML =
+      ["❤️","💖","💕","💘"][Math.floor(Math.random()*4)];
+
+      love.style.left =
+      Math.random() * window.innerWidth + "px";
+
+      love.style.top =
+      (window.innerHeight - 100) + "px";
+
+      love.style.fontSize =
+      (Math.random() * 25 + 20) + "px";
+
+      document.body.appendChild(love);
+
+      setTimeout(() => {
+        love.remove();
+      },3000);
+
+    }
+
+  }
+
+</script>
+
+</body>
 </html>
+
